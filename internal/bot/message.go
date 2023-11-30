@@ -18,7 +18,7 @@ func (b *Bot) sendMessage() error {
 		return err
 	}
 
-	msg := messages[rand.Intn(len(messages)-1)]
+	msg := messages[rand.Intn(len(messages))]
 	msg = strings.Replace(msg, "%USER%", user.DisplayOrUsername(), -1)
 
 	_, err = b.state.SendMessage(b.channelID, msg)

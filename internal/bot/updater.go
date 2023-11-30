@@ -14,7 +14,7 @@ import (
 
 func (b *Bot) updater(ctx context.Context) {
 	// t := time.NewTicker(time.Hour * (24 * 7))
-	t := time.NewTicker(time.Minute * 2)
+	t := time.NewTicker(time.Second * 10)
 
 	for {
 		select {
@@ -54,7 +54,7 @@ func (b *Bot) updater(ctx context.Context) {
 				continue
 			}
 
-			if rand.Intn(1) == 1 {
+			if rand.Intn(2) == 1 {
 				role, err := b.state.Role(b.guildID, b.roleID)
 				if err != nil {
 					ctxlog.Error(ctx, "error fetching role", zap.Error(err))
