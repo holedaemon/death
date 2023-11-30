@@ -31,6 +31,9 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
+    - name: Build image
+      run: docker build --file Dockerfile --tag death:latest .
+    
     - name: Push to GitHub
       if: ${{ github.repository == 'holedaemon/death' && github.event_name == 'push' && github.ref == 'refs/heads/trunk' }}
       run: |
