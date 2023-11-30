@@ -13,8 +13,7 @@ import (
 )
 
 func (b *Bot) updater(ctx context.Context) {
-	// t := time.NewTicker(time.Hour * (24 * 7))
-	t := time.NewTicker(time.Second * 10)
+	t := time.NewTicker(time.Hour * (24 * 7))
 
 	for {
 		select {
