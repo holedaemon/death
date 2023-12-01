@@ -10,6 +10,9 @@ var messages = []string{
 	"%USER% has passed on",
 	"%USER% is on their way to see King Kai",
 	"%USER% got acute radiation poisoning",
+	"%USER% fell from a high place",
+	"%USER% has met a terrible fate",
+	"%USER% was devoured by Turfy's cat",
 }
 
 func (b *Bot) sendMessage() error {
