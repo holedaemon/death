@@ -7,8 +7,7 @@ RUN go mod download
 
 COPY ./ ./
 
-
-RUN go build . -o death
+RUN go build -o death .
 
 FROM gcr.io/distroless/base-debian12:nonroot
 COPY --from=builder /app/death /death
